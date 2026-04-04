@@ -23,10 +23,9 @@ export default function Home() {
         setUsername(stored);
         return;
       } 
-        const generated = generateUsername();
-        localStorage.setItem(STORAGE_KEY, generated);
-        setUsername(generated);
-      
+      const generated = generateUsername();
+      localStorage.setItem(STORAGE_KEY, generated);
+      setUsername(generated);
     }
 
     main();
@@ -34,6 +33,10 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-4">
       <div className="w-full max-w-md space-y-8">
+        <div className="text-center space-y-2">
+          <h1 className="text-2xl font-bold tracking-tight text-green-500">{">"}Anonymous Chat</h1>
+          <p className="text-zinc-500 text-sm">Create a secure room and start chatting anonymously</p>
+        </div>
         <div className="border border-zinc-800 bg-zinc-900/50 p-6 backdrop-blur-md">
           <div className="space-y-5">
             <div className="space-y-2">
